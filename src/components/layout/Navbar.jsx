@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
-  console.log("m", location);
   return (
     <div className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
       <div id="tabs" className="flex justify-between">

@@ -15,7 +15,6 @@ const Pagination = ({
   return (
     <div className="flex content-center h-8">
       {pages.map((page, index) => {
-        console.log(page);
         if (page === "LEFT")
           return (
             <div

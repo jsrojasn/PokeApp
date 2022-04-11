@@ -33,14 +33,13 @@ export const fetchPageNumbers = (numberOfPages, currentPage) => {
         break;
       }
 
-      // handle: (1) {2 3} [4] {5 6} > (10)
+      
       case !hasLeftSpill && hasRightSpill: {
         const extraPages = createArray(endPage + 1, endPage + spillOffset);
         pages = [...pages, ...extraPages, RIGHT_PAGE];
         break;
       }
 
-      // handle: (1) < {4 5} [6] {7 8} > (10)
       case hasLeftSpill && hasRightSpill:
       default: {
         pages = [LEFT_PAGE, ...pages, RIGHT_PAGE];
